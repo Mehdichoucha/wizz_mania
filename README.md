@@ -1,19 +1,22 @@
 architecture du projet :
- wizz-mania/
-├── common/
-|   |-- protocol.h
-|   |-- protocol.cpp
-|   |--- socket_utils.cpp
-|   |--- socket_utils.h
-├── server/
-│   |-- Server.h
-│   |-- Server.cpp
-│   |--- main_server.cpp
-├── client/
-│   |-- Client.h
-│   |-- Client.cpp
-│   |--- main_client.cpp
-│   |---- ui/   (Qt plus tard)
+WIZZ_Mania/
+│
+├─ common/
+│   ├─ protocol.h
+│   ├─ protocol.cpp
+│   ├─ socket_utils.h
+│   └─ socket_utils.cpp
+│
+├─ client/
+│   ├─ Client.h
+│   ├─ Client.cpp
+│   └─ main_client.cpp
+│
+├─ server/
+│   ├─ Server.h
+│   ├─ Server.cpp
+│   └─ main_server.cpp
+│
 |-- README.md
 |--- CMakeLists.txt
 
@@ -112,3 +115,7 @@ shéma client/serveur :
 [ Client Qt ] ─┐
 [ Client Qt ] ─┼── TCP ──> [ Serveur ]
 [ Client Qt ] ─┘
+
+shéma message/client/server/BDD : 
+
+[Client] --sendMessage()--> [Server] --broadcast()--> [Client(s)]

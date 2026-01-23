@@ -3,10 +3,7 @@
 #include <iostream>
 
 int main() {
-    if (!initSockets()) {
-        std::cerr << "Socket init failed" << std::endl;
-        return 1;
-    }
+    if (!initSockets()) { std::cerr << "Socket init failed\n"; return 1; }
 
     Server server(12345);
     server.start();

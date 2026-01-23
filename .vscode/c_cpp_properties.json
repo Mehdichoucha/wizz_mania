@@ -1,0 +1,21 @@
+{
+    "configurations": [
+        {
+            "name": "CrossPlatform",
+            "includePath": [
+                "${workspaceFolder}/**"
+            ],
+            "defines": [
+                "_DEBUG",
+                "UNICODE",
+                "_UNICODE"
+            ],
+            "compilerPath": "",                  // CMake fournira le compilateur réel
+            "cStandard": "c17",
+            "cppStandard": "gnu++17",
+            "intelliSenseMode": "gcc-x64",      // valable Windows MinGW et macOS GCC
+            "configurationProvider": "go2sh.cmake-integration"
+        }
+    ],
+    "version": 4
+}
