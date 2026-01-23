@@ -1,17 +1,21 @@
 architecture du projet :
  wizz-mania/
 ├── common/
-│   └── protocol.h
+|   |-- protocol.h
+|   |-- protocol.cpp
+|   |--- socket_utils.cpp
+|   |--- socket_utils.h
 ├── server/
-│   ├── Server.h
-│   ├── Server.cpp
-│   └── main_server.cpp
+│   |-- Server.h
+│   |-- Server.cpp
+│   |--- main_server.cpp
 ├── client/
-│   ├── Client.h
-│   ├── Client.cpp
-│   ├── main_client.cpp
-│   └── ui/   (Qt plus tard)
-└── CMakeLists.txt
+│   |-- Client.h
+│   |-- Client.cpp
+│   |--- main_client.cpp
+│   |---- ui/   (Qt plus tard)
+|-- README.md
+|--- CMakeLists.txt
 
 
 planning : 
