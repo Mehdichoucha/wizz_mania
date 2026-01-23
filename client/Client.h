@@ -2,16 +2,17 @@
 #define CLIENT_H
 
 #include <string>
+#include "socket_utils.h"
 
 class Client {
 public:
     Client(const std::string& ip, int port);
-    void connectToServer();
+    bool connectToServer();
     void sendMessage(const std::string& message);
     void listen();
 
 private:
-    int socketFd;
+    socket_t socketFd;   // 👈 le socket appartient au client
     std::string serverIp;
     int serverPort;
 };

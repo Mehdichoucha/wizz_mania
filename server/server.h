@@ -4,6 +4,7 @@
 #include <vector>
 #include <thread>
 #include <string>
+#include "socket_utils.h"
 
 class Server {
 public:
@@ -11,11 +12,12 @@ public:
     void start();
 
 private:
-    int serverSocket;
-    std::vector<int> clients;
+    socket_t serverSocket;          // 👈 socket du serveur
+    std::vector<socket_t> clients;  // 👈 sockets clients
+    int port;
 
     void acceptClients();
-    void handleClient(int clientSocket);
+    void handleClient(socket_t clientSocket);
     void broadcast(const std::string& message);
 };
 
