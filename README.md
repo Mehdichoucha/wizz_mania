@@ -63,7 +63,7 @@ cmake .. -G "MinGW Makefiles" -DCMAKE_PREFIX_PATH="C:\Qt\6.x.x\mingw_64"  # Ajus
 cmake --build . --config Release
 ```
 
-#### Windows (en ligne de commande avec MSVC)
+#### Windows (en ligne de commande avec MSVC)àçop
 ```bash
 cd wizzMania
 mkdir build
