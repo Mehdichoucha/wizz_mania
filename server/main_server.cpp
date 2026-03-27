@@ -1,14 +1,12 @@
-#include "Server.h"
-#include "socket_utils.h"
-#include <iostream>
+#include <QCoreApplication>
+#include "Server.hpp"
 
-int main() {
-    if (!initSockets()) { std::cerr << "Socket init failed\n"; return 1; }
+int main(int argc, char *argv[])
+{
+    QCoreApplication a(argc, argv);
 
-    Server server(12345);
+    Server server(nullptr, 1234);
     server.start();
 
-    cleanupSockets();
-    return 0;
+    return a.exec();
 }
-// --- IGNORE ---

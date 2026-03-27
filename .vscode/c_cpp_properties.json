@@ -1,20 +1,19 @@
 {
     "configurations": [
         {
-            "name": "CrossPlatform",
+            "name": "Win32",
             "includePath": [
-                "${workspaceFolder}/**"
+                "${workspaceFolder}/**",
+                "C:/Qt/6.10.1/mingw_64/include/**"
             ],
             "defines": [
                 "_DEBUG",
-                "UNICODE",
-                "_UNICODE"
+                "UNICODE"
             ],
-            "compilerPath": "",                  // CMake fournira le compilateur réel
+            "compilerPath": "C:/mingw64/bin/g++.exe",
             "cStandard": "c17",
-            "cppStandard": "gnu++17",
-            "intelliSenseMode": "gcc-x64",      // valable Windows MinGW et macOS GCC
-            "configurationProvider": "go2sh.cmake-integration"
+            "cppStandard": "c++17",
+            "intelliSenseMode": "gcc-x64"
         }
     ],
     "version": 4

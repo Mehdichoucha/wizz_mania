@@ -1,15 +1,16 @@
-#include "Client.h"
-#include "socket_utils.h"
-#include <iostream>
+#include <QApplication>
+#include "Client.hpp"
+#include "ChatWindow.hpp"
 
-int main() {
-    if (!initSockets()) { std::cerr << "Socket init failed\n"; return 1; }
+int main(int argc, char *argv[])
+{
+    QApplication a(argc, argv);
 
-    Client client("127.0.0.1", 12345);
-    if (!client.connectToServer()) { cleanupSockets(); return 1; }
+    Client client;
+    client.connectToServer("127.0.0.1", 1234);
 
-    client.listen();
+    ChatWindow window(&client);
+    window.show();
 
-    cleanupSockets();
-    return 0;
+    return a.exec();
 }
